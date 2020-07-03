@@ -2,10 +2,27 @@ h1, h2 {
   font-family: Lato;
 }
 
-.space{
-  margin-right: 20px;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.bound{
-  border: 1px solid black;
+th,td{
+   padding: 6px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+tr {
+  border : 1px solid grey;
+}
+
+tr:hover{
+  cursor: pointer;
+}
+
+  tr:nth-child(even) {
+  background-color: #dddddd;
 }

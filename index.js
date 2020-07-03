@@ -1,7 +1,5 @@
 import './style.css';
 
-const appDiv = document.getElementById('app');
-
 class Email{
 
   constructor(){
@@ -10,4 +8,3 @@ class Email{
    {name:'Medium', emailID : 'abc@medium.com', title='Javascript', content :'sdjbjbcjcbjcajscn'}]
   }
 }
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
