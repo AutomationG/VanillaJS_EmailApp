@@ -20,18 +20,18 @@ function initialData(){
      document.getElementById('data').innerHTML = view;
   }
   createTable();
-  
+
   function openTab(index){
    let newWin = window.open()
    let data = initialData()
    let content = '<html>'+
                   '<body>' +
-                  '<div>'+content[index]['title']+'</div>' +
-                  '<div>'+content[index]['emailID']+'</div>' +
-                  '<div>'+content[index]['sub']+'</div>' +
+                  '<div>'+data[index]['title']+'</div>' +
+                  '<div>'+data[index]['emailID']+'</div>' +
+                  '<div>'+data[index]['sub']+'</div>' +
                   '</body>' +
                   '</html>' +
-   newWin.write()
+   newWin.document.write(content)
 
   }
 
