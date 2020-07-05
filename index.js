@@ -1,20 +1,5 @@
 import './style.css';
 
-function openTab(){
-  console.log('new tab')
-  var newWin = window.open();
-  let str = '<div>ajsnx</div>' + 
-            '<div>aksm</div>' + 
-            '<div>jnjsn</div>';
-
- newWin.document.write(str)
-}
-
-function openk(){
-console.log('ddbausdbu')
-}
-
-//openTab();
 function initialData(){
    return [{name:'LinkedIn', emailID : 'abc@linkedIn.com', title:'Linked In Jobs', 
    sub :'sdjb jbcjc bjc ajscn'},{name:'Myntra', emailID : 'abc@myntra.com', title:'Myntra',
@@ -26,7 +11,7 @@ function initialData(){
     let view= '<table>';
     for(let i=0; i< content.length;i++){
     view =  view +
-            '<tr onclick = "openk()">' + 
+            '<tr class ="emailID">' + 
             '<td class="underline">'+content[i]['name']+'</td>'+
             '<td>' + content[i]['sub']+'</td>'+
             '</tr>'
@@ -36,5 +21,19 @@ function initialData(){
   }
  
   createTable();
+
+  var userSelection = document.getElementsByClassName("emailID");
+
+  for(let i = 0; i < userSelection.length; i++) {
+    userSelection[i].addEventListener("click", function() {
+    let content = initialData()
+    let newWin = window.open();
+    let str = '<div>'+ content[i]['title'] +'</div>' + 
+              '<div>'+ content[i]['emailID'] +'</div>' +
+              '<div>'+ content[i]['sub'] +'</div>';
+
+   newWin.document.write(str)
+    },false)
+  }
 
   
