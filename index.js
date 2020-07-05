@@ -1,5 +1,20 @@
 import './style.css';
 
+function openTab(){
+  console.log('new tab')
+  var newWin = window.open();
+  let str = '<div>ajsnx</div>' + 
+            '<div>aksm</div>' + 
+            '<div>jnjsn</div>';
+
+ newWin.document.write(str)
+}
+
+function open(){
+console.log('ddbausdbu')
+}
+
+//openTab();
 function initialData(){
    return [{name:'LinkedIn', emailID : 'abc@linkedIn.com', title:'Linked In Jobs', 
    sub :'sdjb jbcjc bjc ajscn'},{name:'Myntra', emailID : 'abc@myntra.com', title:'Myntra',
@@ -8,15 +23,15 @@ function initialData(){
 
   function createTable(){
     let content = initialData()
-    let view= "<table>";
+    let view= '<table>';
     for(let i=0; i< content.length;i++){
     view =  view +
-            "<tr onclick='openTab(i)'>" + 
-            "<td class='underline'>"+content[i]['name']+"</td>"+
-            "<td>" + content[i]['sub']+"</td>"+
-            "</tr>"
+            '<tr onclick = "openk()">' + 
+            '<td class="underline">'+content[i]['name']+'</td>'+
+            '<td>' + content[i]['sub']+'</td>'+
+            '</tr>'
     }
-     view = view + "</table>";
+     view = view + '</table>';
      document.getElementById('data').innerHTML = view;
   }
  
