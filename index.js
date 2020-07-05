@@ -10,7 +10,7 @@ function openTab(){
  newWin.document.write(str)
 }
 
-function open(){
+function openk(){
 console.log('ddbausdbu')
 }
 
